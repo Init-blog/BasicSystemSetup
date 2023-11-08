@@ -1,0 +1,52 @@
+# These pacakges provide the necessary information for Homebrew 
+# to install and manage various software packages and applications.
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+# Homebrew can manage 3 kind of apps
+# 'brew' will be used for CLI software
+# 'mas' will be used for Mac App Store software
+# 'cask' will be used for all the apps not available on the app store
+
+# The brew command will fetch and execute installation instructions from homebrew
+# those instructions are called formulae
+# "mas" stands for MacAppStore, this package allows homebrew to install apps from the mac store
+brew "mas"
+# "zsh-autosuggestions" will enable terminal suggestions based on you command history
+# this formulae requires the ~/.zshrc to be modified, this repo includes a script
+# that will automatically set up this.
+brew 'zsh-autosuggestions'
+
+# Once "mas" is installed we can use that command to install apps from the app store
+
+# For this example we are only installing "The Unarchiver", 
+# which is a file compressor/decompressor, like a Mac winzip
+mas "The Unarchiver", id: 425424353
+# mas "Keynote", id: 409183694
+# mas "Numbers", id: 409203825
+# mas "Pages", id: 409201541
+
+# I have commented the other apps, but feel free to uncomment them and add your own
+# The "app name string" is used for identification, while 
+# the id ensures the correct app is installed from the Mac App Store via Homebrew.
+# You can find the app id by looking for your app on the AppStore, sharing as a link
+# and in the link you'll find a number, that is the app id
+# Example: https://apps.apple.com/mx/app/keynote/id409183694
+
+
+# Most of the cool apps are not available from the AppStore
+# For those we use the cask command
+
+# For this example we'll only install Chrome
+cask "google-chrome"
+# cask "visual-studio-code"
+# cask "microsoft-edge"
+# cask "docker"
+# cask "zoom"
+# cask "miro"
+# cask "figma"
+
+# Uncomment all that you want or you could also search for 
+# any app you want on https://brew.sh/ to get the cask id
+
