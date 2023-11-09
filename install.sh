@@ -24,6 +24,9 @@ cd $REPO_NAME-main || exit
 # the programs without whining that it was downloaded from the internetz
 sh brew/install.sh
 
+# Source the updated .zshrc file
+source ~/.zshrc
+
 # After everything is installed, tweak some system settings,
 # and install some fonts
 sh SysSettings/setup.sh
